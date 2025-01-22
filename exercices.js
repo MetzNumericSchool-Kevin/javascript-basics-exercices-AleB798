@@ -8,4 +8,14 @@ let healingPotion = 150;
 let healingPotionPrice = 20;
 let isOpen = true;
 
+// Affichage conditionnel
 
+function openClose (nameShop, isOpen) {
+
+    if (isOpen) {
+        console.log(`Bienvenue dans la boutique ${nameShop} Aventurier !`);
+    } else {
+        console.log("La boutique " + nameShop + " est fermée, revenez plus tard Aventurier !");
+    }
+}
+openClose(nameShop, false);
