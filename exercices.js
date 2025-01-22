@@ -155,9 +155,9 @@ const inventaire = [
         potionStock: 100
     },
     {
-        potionName: "Cruficixious",
+        potionName: "Crucifixious",
         potionPrice: 150,
-        potionSotck: 10
+        potionStock: 10
     },
     {
         potionName: "Malicious",
@@ -166,7 +166,55 @@ const inventaire = [
     }
 ]
 
-console.log(inventaire)
+// console.log(inventaire)
+
+// Aventurier, regarde tout ce que je vends !
+
+//     Affiche ton inventaire à l'aventurier avec une boucle for
+//     Pour chaque itération, affiche :
+//         Nom: <nom_potion>
+//         Prix: <prix_potion>
+//         Stock: <stock_potion>
+//     Trouve une autre solution pour afficher dynamiquement chacune des propriétés de la potion sans utiliser la notation pointée ou crochet. Tu as plusieurs possibilités :
+//         for sur Object.keys
+//         for ... in sur ton objet
+//         for ... of sur Object.entries
+
+for (i=0; i<inventaire.length;i++) {
+    console.log(`Nom : ${inventaire[i].potionName}`)
+    console.log(`Prix : ${inventaire[i].potionPrice}`)
+    console.log(`Stock : ${inventaire[i].potionStock}`)
+}
+
+// Autre solution
+// for sur Object.keys => Retourne un tableau des clés (propriétés) d'un objet.
+
+for (i = 0; i < inventaire.length; i++) { // Parcourt chaque objet dans le tableau
+    const objectKeys = Object.keys(inventaire[i]); // Récupère uniquement les clés de l'objet courant grâce à Object.keys
+    for (j = 0; j < objectKeys.length; j++) { // Parcourt chaque clé
+        const key = objectKeys[j]; // Récupère la clé courante
+        console.log(`${key}: ${inventaire[i][key]}`); // Affiche la clé et sa valeur correspondante
+    }
+}
+
+
+// for .... in sur l'objet => Parcourt les clés (propriétés) d'un objet ou les index d'un tableau.
+
+for (const i in inventaire) { // on parcourt les index du tableau inventaire (qui contient les objets)
+    for (const key in inventaire[i] ) { // on parcourt les propriétés/clés de l'objet correspondant à inventaire[i]
+        console.log(`${key}: ${inventaire[i][key]}`); // on affiche la clé et sa valeur correspondante pour l'objet situé à l'index i
+    }
+}
+
+// for ... of sur Object.entries => Retourne un tableau de paires [clé, valeur] pour chaque propriété d'un objet.
+
+for (const i of inventaire) { // on parcourt directement les objets contenus dans le tableau inventaire
+    for (const [key, value] of Object.entries(i)) { // pour chaque objet on récupères les paires clés/valeurs grâce à Object.entries 
+        console.log(`${key} : ${value}`) // on affiche les clés et valeurs correspondantes 
+    }
+}
+
+
 
 
 
