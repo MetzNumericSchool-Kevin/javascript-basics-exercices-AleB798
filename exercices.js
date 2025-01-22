@@ -57,37 +57,49 @@ let isOpen = true;
 
 // Calcul du prix total d'une commande de potion
 
-let money = "Coins"
+// let money = "Coins"
 
-let nbOfPotion = parseInt(prompt("Quel quantité de potion de soin souhaitez-vous ? "))
+// let nbOfPotion = parseInt(prompt("Quel quantité de potion de soin souhaitez-vous ? "))
 
-let totalPrice = (nbOfPotion*healingPotionPrice)
+// let totalPrice = (nbOfPotion*healingPotionPrice)
 
-function price() {
-    console.log(`Le prix pour ${nbOfPotion} potions de soin : ${totalPrice} ${money} mon cher Aventurier.`)
-}
+// function price() {
+//     console.log(`Le prix pour ${nbOfPotion} potions de soin : ${totalPrice} ${money} mon cher Aventurier.`)
+// }
 
-price();
+// price();
 
 // Bourse de l'Aventurier
 
-let playerMoney = 150000;
+// let playerMoney = 150000;
 
-function hasEnough() {
-    if ((playerMoney >= totalPrice) && (nbOfPotion <= healingPotionNb)) {
-        console.log("Vous avez d'argent et il y a assez de stock pour acheter des potions de soins")
-        let newStock = (healingPotionNb-nbOfPotion)
-        console.log(`Le nouveau stock est de ${newStock}`)
-        let newPlayerMoney = (playerMoney-totalPrice)
-        console.log(`Votre nouveau solde est de ${newPlayerMoney} ${money}`)
-    } else if (playerMoney < totalPrice ) {
-        console.log("Vous n'avez pas assez d'argent pour acheter des potions de soin !!")
-    } else if (nbOfPotion > healingPotionNb) {
-        console.log("Il n'y a pas assez de stock !!")
-    }
-}
+// function hasEnough() {
+//     if ((playerMoney >= totalPrice) && (nbOfPotion <= healingPotionNb)) {
+//         console.log("Vous avez d'argent et il y a assez de stock pour acheter des potions de soins")
+//         let newStock = (healingPotionNb-nbOfPotion)
+//         console.log(`Le nouveau stock est de ${newStock}`)
+//         let newPlayerMoney = (playerMoney-totalPrice)
+//         console.log(`Votre nouveau solde est de ${newPlayerMoney} ${money}`)
+//     } else if (playerMoney < totalPrice ) {
+//         console.log("Vous n'avez pas assez d'argent pour acheter des potions de soin !!")
+//     } else if (nbOfPotion > healingPotionNb) {
+//         console.log("Il n'y a pas assez de stock !!")
+//     }
+// }
 
-hasEnough();
+// hasEnough();
+
+// Liste des potions
+
+//     Créé un tableau qui contient les noms de trois potions que tu vends dans ta boutique.
+//     Affiche le tableau directement dans la console.
+
+let potionsNames = ["Lovevicious", "Crucifixious", "Malicious"]
+console.table(potionsNames)
+
+// ou console.log(potionsNames)
+
+
 
 
 
