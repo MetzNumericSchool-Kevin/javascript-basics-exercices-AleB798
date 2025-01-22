@@ -61,8 +61,36 @@ let money = "Coins"
 
 let nbOfPotion = parseInt(prompt("Quel quantité de potion de soin souhaitez-vous ? "))
 
+let totalPrice = (nbOfPotion*healingPotionPrice)
+
 function price() {
-    console.log(`Le prix pour ${nbOfPotion} potions de soin : ${nbOfPotion*healingPotionPrice} ${money} mon cher Aventurier.`)
+    console.log(`Le prix pour ${nbOfPotion} potions de soin : ${totalPrice} ${money} mon cher Aventurier.`)
 }
 
 price();
+
+// Bourse de l'Aventurier
+
+let playerMoney = 150000;
+
+function hasEnough() {
+    if ((playerMoney >= totalPrice) && (nbOfPotion <= healingPotionNb)) {
+        console.log("Vous avez d'argent et il y a assez de stock pour acheter des potions de soins")
+        let newStock = (healingPotionNb-nbOfPotion)
+        console.log(`Le nouveau stock est de ${newStock}`)
+        let newPlayerMoney = (playerMoney-totalPrice)
+        console.log(`Votre nouveau solde est de ${newPlayerMoney} ${money}`)
+    } else if (playerMoney < totalPrice ) {
+        console.log("Vous n'avez pas assez d'argent pour acheter des potions de soin !!")
+    } else if (nbOfPotion > healingPotionNb) {
+        console.log("Il n'y a pas assez de stock !!")
+    }
+}
+
+hasEnough();
+
+
+
+
+
+
