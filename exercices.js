@@ -127,22 +127,46 @@ let potionsNames = ["Lovevicious", "Crucifixious", "Malicious"]
 
 // Rangeons les informations de la potion de soin dans un objet 🧹
 
-let potion = {
-    potionName: "Miraculicious",
-    potionPrice: 55,
-    potionStock: 20,
-}
+// let potion = {
+//     potionName: "Miraculicious",
+//     potionPrice: 55,
+//     potionStock: 20,
+// }
 
-console.log(potion)
+// console.log(potion)
 
 // Affichons les informations de la potion
 
 //     Affiche le nom de la potion en utilisant la notation pointée .
 //     Affiche le prix de la potion en utilisant la notation crochet []
 
-console.log(potion.potionName)
-console.log(potion["potionPrice"])
+// console.log(potion.potionName)
+// console.log(potion["potionPrice"])
 
+// C'est l'heure de faire l'inventaire...
+
+//     Transforme ton tableau de de noms de potions, en tableau d'objets de potions.
+//     Tu peux nommer ta constante inventaire
+
+const inventaire = [
+    {
+        potionName: "Lovevicious",
+        potionPrice: 75,
+        potionStock: 100
+    },
+    {
+        potionName: "Cruficixious",
+        potionPrice: 150,
+        potionSotck: 10
+    },
+    {
+        potionName: "Malicious",
+        potionPrice: 300,
+        potionStock: 64
+    }
+]
+
+console.log(inventaire)
 
 
 
