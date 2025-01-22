@@ -122,8 +122,26 @@ let potionsNames = ["Lovevicious", "Crucifixious", "Malicious"]
 
 // Finaly, nope.
 
-potionsNames.pop();
-console.table(potionsNames)
+// potionsNames.pop();
+// console.table(potionsNames)
+
+// Rangeons les informations de la potion de soin dans un objet 🧹
+
+let potion = {
+    potionName: "Miraculicious",
+    potionPrice: 55,
+    potionStock: 20,
+}
+
+console.log(potion)
+
+// Affichons les informations de la potion
+
+//     Affiche le nom de la potion en utilisant la notation pointée .
+//     Affiche le prix de la potion en utilisant la notation crochet []
+
+console.log(potion.potionName)
+console.log(potion["potionPrice"])
 
 
 
