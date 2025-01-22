@@ -91,31 +91,35 @@ let isOpen = true;
 
 // Liste des potions
 
-//     Créé un tableau qui contient les noms de trois potions que tu vends dans ta boutique.
-//     Affiche le tableau directement dans la console.
-
 let potionsNames = ["Lovevicious", "Crucifixious", "Malicious"]
-console.table(potionsNames)
+// console.table(potionsNames)
 
 // ou console.log(potionsNames)
 
+
 // Affichage des potions
 
-console.log(potionsNames[0])
+// console.log(potionsNames[0])
 
-// pour trouver la denrière valeur d'un array avec length
-console.log(potionsNames[potionsNames.length-1])
+// // pour trouver la denrière valeur d'un array avec length
+// console.log(potionsNames[potionsNames.length-1])
 
-// avec une boucle forEach
-potionsNames.forEach((potion) => {
-    console.log(`Nous avons de la ${potion}`)
-});
+// // avec une boucle forEach
+// potionsNames.forEach((potion) => {
+//     console.log(`Nous avons de la ${potion}`)
+// });
 
 // avec une boucle for
 
-for (i=0; i<potionsNames.length;i++) {
-    console.log(`Nous avons de la ${potionsNames[i]}`)
-}
+// for (i=0; i<potionsNames.length;i++) {
+//     console.log(`Nous avons de la ${potionsNames[i]}`)
+// }
+
+// Ajout d'une nouvelle potion
+
+potionsNames.push("Infectious")
+console.table(potionsNames)
+
 
 
 
