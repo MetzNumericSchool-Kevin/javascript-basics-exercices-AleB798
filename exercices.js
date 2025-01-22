@@ -117,8 +117,14 @@ let potionsNames = ["Lovevicious", "Crucifixious", "Malicious"]
 
 // Ajout d'une nouvelle potion
 
-potionsNames.push("Infectious")
+// potionsNames.push("Infectious")
+// console.table(potionsNames)
+
+// Finaly, nope.
+
+potionsNames.pop();
 console.table(potionsNames)
+
 
 
 
